@@ -1,0 +1,270 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+main {
+    width: 90%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.main-header {
+    background: black;
+    color: red;
+    padding: 10px 0;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-header .container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-right {
+    display: flex;
+    gap: 15px;
+}
+
+.main-header h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.main-header nav a {
+    text-decoration: none;
+    color: red;
+    padding: 10px 20px;
+    transition: background 0.3s ease;
+    border-radius: 5px;
+}
+
+.main-header nav a:hover {
+    background: red;
+    color: black;
+    transform: scale(1.05);
+}
+
+.submenu-header {
+    background-color: red;
+    width: 100%;
+    position: sticky;
+    top: 60px; 
+    z-index: 999;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.submenu-header nav a {
+    text-decoration: none;
+    color: black;
+    padding: 8px 15px;
+    margin: 0 5px;
+    transition: background 0.3s ease;
+    border-radius: 5px;
+}
+
+.submenu-header nav a:hover {
+    background: black;
+    color: red;
+    transform: scale(1.05);
+}
+
+.welcome {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.651), rgba(223, 25, 25, 0.658)), url('lineup.jpg');
+    background-size: cover; 
+    background-position: center; 
+    color: whitesmoke;
+    text-align: center;
+    padding: 150px 50px; 
+}
+
+.welcome h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.welcome p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.welcome button {
+    padding: 15px 30px;
+    font-size: 1.1em;
+    background-color: black;
+    color: red;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.welcome button:hover {
+    background-color: red;
+    color: black;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .welcome h2 {
+        font-size: 2em;
+    }
+
+    .welcome p {
+        font-size: 1em;
+    }
+
+    .welcome button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+}
+
+#about-us {
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+#about-us p {
+    text-align: justify;
+}
+
+.content-box {
+    background-color: rgba(128, 0, 0, 0.507);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.651);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.651);
+}
+
+.honours-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.honours-list p {
+    text-align: justify;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+    background-color: rgba(128, 0, 0, 0.507);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.651);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    gap: 15px;
+}
+
+table:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.651);
+}
+
+table, th, td {
+    border: 1px solid rgb(138, 7, 7);
+    padding: 10px;
+    text-align: center;
+    color: whitesmoke;
+}
+
+form {
+    background-color: rgba(128, 0, 0, 0.507);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.651);
+    color: whitesmoke;
+}
+
+input[type="text"], input[type="email"], select, textarea {
+    width: 100%;
+    padding: 5px 0;
+    margin: 5px 0;
+    border: 1px solid rgba(128, 0, 0, 0.507);
+    border-radius: 5px;
+}
+
+input[type="submit"], input[type="reset"] {
+    background-color: rgba(255, 0, 0, 0.651);
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: black;
+    color: rgba(255, 0, 0, 0.651);
+}
+
+#contact-us {
+    text-align: center;
+    padding: 15px 0;
+    color: red;
+}
+
+footer {
+    background-color: red;
+    text-align: center;
+    padding: 5px 0;
+    color: black;
+}
+
+.gallery {
+    padding: 20px;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 800px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
